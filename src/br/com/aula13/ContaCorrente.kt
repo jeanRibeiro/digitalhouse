@@ -2,35 +2,38 @@ package br.com.aula13
 
 class ContaCorrente(var limite:Double, numeroConta:Int) :ContaBancaria(numeroConta), Imprimivel {
 
-    init {
-        limite = 100.0
-    }
-
     //veio da classe abstrata
     override fun depositar(valor:Double){
         saldo += valor;
+        println("Depósito realizado com sucesso!");
+        //mostrarDados();
     }
     override fun sacar(valor:Double){
-        var saldoTemporario = saldo - valor;
 
-        if(saldoTemporario < limite+saldo){
-            println("Saque não permitido!");
+        if((saldo - valor) < -limite){
+            println("Operação não permitida!")
+            println("valor R$$valor solicitado ultrapassa saldo e limite.")
             return;
         }
 
+        saldo -= valor;
 
-
-        if(valor <= saldo){
-            println("O saque foi realizado!")
+        if((saldo - valor) < 0){
+            println("Atenção! Você entrou no cheque especial!")
+            limite -= -saldo;
         }
-        saldo -= valor
 
-
+        println("Saque realizado com sucesso!");
+        //mostrarDados();
     }
+
 
     //veio da interface
     override fun mostrarDados() {
-        println("A conta $numeroConta possui o limite R$$limite")
+        println("Conta Corrente!");
+        println("Número: $numeroConta");
+        println("Saldo atual: R$$saldo");
+        println("Limite atual: R$$limite");
     }
 
 

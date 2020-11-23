@@ -5,5 +5,6 @@ abstract class ContaBancaria(var numeroConta: Int) {
 
     abstract fun depositar(valor:Double)
     abstract fun sacar(valor:Double)
+    abstract fun transferir(valor:Double, contaBancaria: ContaBancaria)
 
 }
