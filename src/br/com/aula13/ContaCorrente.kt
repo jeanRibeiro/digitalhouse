@@ -27,6 +27,10 @@ class ContaCorrente(var limite:Double, numeroConta:Int) :ContaBancaria(numeroCon
         //mostrarDados();
     }
 
+    override fun transferir(valor: Double, contaBancaria: ContaBancaria) {
+        TODO("Not yet implemented")
+    }
+
 
     //veio da interface
     override fun mostrarDados() {

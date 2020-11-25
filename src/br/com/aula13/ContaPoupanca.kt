@@ -20,6 +20,10 @@ class ContaPoupanca(var taxaDeOperacao:Double, numeroConta:Int) :ContaBancaria(n
         //mostrarDados();
     }
 
+    override fun transferir(valor: Double, contaBancaria: ContaBancaria) {
+        TODO("Not yet implemented")
+    }
+
 
     //veio da interface
     override fun mostrarDados() {
