@@ -56,9 +56,9 @@ class Calculadora :OperacoesMatematicas{
     }
 
     //funções lambdas
-    var sum: (Double, Double) -> Double = { num1:Double, num2:Double -> num1 + num2 };
-    var subtract: (Double, Double) -> Double = { numero1:Double, numero2:Double -> numero1 - numero2 }
-    var multiply: (Double, Double) -> Double = { num1:Double, num2:Double -> num1 * num2 }
-    var divide: (Double, Double) -> Double = { numero1:Double, numero2:Double -> numero1 / numero2 }
+    var sum: (Double, Double) -> Double = { num1:Double, num2:Double -> (num1+num2); };
+    var subtract: (Double, Double) -> Double = { numero1:Double, numero2:Double -> (numero1-numero2); }
+    var multiply: (Double, Double) -> Double = { num1:Double, num2:Double -> (num1*num2); }
+    var divide: (Double, Double) -> Double = { numero1:Double, numero2:Double -> (numero1/numero2); }
 
 }

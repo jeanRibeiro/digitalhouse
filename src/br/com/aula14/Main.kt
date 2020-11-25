@@ -66,26 +66,26 @@ fun main() {
     println("--------------------------------------------");
 
 
-    println("--------------------------------------------");
-    println("----------   DÚVIDA   ----------------------");
-    println("--------------------------------------------");
-
-    //chamar aqui direto
-    var resultado = calculadora.somar(numero2 = num2!!.toDouble(), numero1 = num1!!.toDouble());
-
-    //ou
-
-    //chamar uma função dentro da classe
-    var result = calculadora.calcularComInterface(num1!!.toDouble(), num2!!.toDouble(), operador!!);
-
-    println("--------------------------------------------");
-
-
+//    println("--------------------------------------------");
+//    println("----------   DÚVIDA   ----------------------");
+//    println("--------------------------------------------");
+//
+//    //chamar aqui direto
+//    var resultado = calculadora.somar(numero2 = num2!!.toDouble(), numero1 = num1!!.toDouble());
+//
+//    //ou
+//
+//    //chamar uma função dentro da classe
+//    var result = calculadora.calcularComInterface(num1!!.toDouble(), num2!!.toDouble(), operador!!);
+//
+//    println("--------------------------------------------");
 
 
 
 
 
 
-    
+
+
+
 }
