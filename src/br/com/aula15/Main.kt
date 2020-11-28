@@ -5,20 +5,31 @@ import java.lang.Exception
 import java.util.*
 
 fun main() {
-    println("############################################");
-    println("########   Livraria Digital House   ########");
-    println("############################################");
+    //    println("############################################");
+//    println("########   Livraria Digital House   ########");
+//    println("############################################");
+//
+//    var menuInicial = MenuInicial();
+//    var estoque = EstoqueLivro();
+//
+//    menuInicial.listaMenu.add(MenuInicial(0, "Sair", menuInicial));
+//    menuInicial.listaMenu.add(MenuInicial(1, "Cadastrar", menuInicial));
+//    menuInicial.listaMenu.add(MenuInicial(2, "Consultar", menuInicial));
+//    menuInicial.listaMenu.add(MenuInicial(3, "Consultar por Código", menuInicial));
+//    menuInicial.listaMenu.add(MenuInicial(4, "Efetuar Venda", menuInicial));
+//
+//    iniciaSistema(menuInicial, estoque);
 
-    var menuInicial = MenuInicial();
-    var estoque = EstoqueLivro();
+    val estoque = EstoqueLivro()
+    val livro1 = Livro(1, "titulo1", "autor1", 1990, 2, 4, 18.90)
+    val livro2 = Livro(1, "titulo1", "autor1", 1990, 2, 4, 18.90)
+    val livro3 = Livro(3, "titulo1", "autor1", 1990, 2, 4, 18.90)
 
-    menuInicial.listaMenu.add(MenuInicial(0, "Sair", menuInicial));
-    menuInicial.listaMenu.add(MenuInicial(1, "Cadastrar", menuInicial));
-    menuInicial.listaMenu.add(MenuInicial(2, "Consultar", menuInicial));
-    menuInicial.listaMenu.add(MenuInicial(3, "Consultar por Código", menuInicial));
-    menuInicial.listaMenu.add(MenuInicial(4, "Efetuar Venda", menuInicial));
+    estoque.addLivroALista(livro1)
+    estoque.addLivroALista(livro2)
+    estoque.addLivroALista(livro3)
 
-    iniciaSistema(menuInicial, estoque);
+    estoque.consultaTodosLivros()// retorna apenas livros 1 e 3, pois o 2 é igual ao 1
 }
 
 fun iniciaSistema(menuInicial:MenuInicial, estoqueLivro: EstoqueLivro){
